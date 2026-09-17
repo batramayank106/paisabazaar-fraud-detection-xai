@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+.env
+.venv/
+venv/
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep dataset.csv tracked per user request (30MB - will be uploaded)
+# data/dataset.csv is INTENTIONALLY TRACKED
+
+# Models - large binaries (ignored to keep repo lean, uncomment to track)
+*.joblib
+outputs/models/
+*.pkl
+*.pickle
+
+# CatBoost logs
+catboost_info/
+
+# Logs
+*.log
