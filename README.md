@@ -171,7 +171,6 @@ This project was built to demonstrate production-quality data science practices 
 - [Model Card](#model-card)
 - [Future Improvements](#future-improvements)
 - [Resume Bullet Points](#resume-bullet-points)
-- [Technical Interview Preparation](#technical-interview-preparation)
 - [Contributing](#contributing)
 - [License](#license)
 - [Author](#author)
@@ -431,29 +430,6 @@ See [model_card.md](model_card.md) for full details.
 - Performed **15+ statistical tests** (t-test, ANOVA, Chi-Square, Mann-Whitney U, Kruskal-Wallis) with Bonferroni correction and effect sizes (Cohen's d, Cramer's V) to validate feature significance
 - Developed **modular ML pipeline** with 6-model comparison, threshold optimization, calibration analysis, and lift/gain curves in a production-ready Python package with logging and configuration management
 - Analyzed **class imbalance strategies** comparing class weights, SMOTE, and SMOTEENN, demonstrating that class weights achieve comparable recall without synthetic data artifacts
-
----
-
-## Technical Interview Preparation
-
-### STAR Stories
-
-**Situation:** The PaisaBazaar banking dataset had no explicit fraud label and contained data quality issues including corrupted sentinel values (`!@9#%8`, `NM`), skewed financial distributions, and moderate class imbalance (20.3% fraud).
-
-**Task:** Build a production-quality fraud detection system with interpretable predictions suitable for regulatory compliance in the banking sector.
-
-**Action:**
-- Engineered a composite fraud label from domain rules combining credit score (Poor segment) with behavioral thresholds (delayed payments > 17, utilization > 36.2%, inquiries > 11)
-- Designed 43 features across 5 categories: financial ratios, risk scores, behavioral patterns, interaction effects, and temporal features
-- Built and compared 6 ML models with stratified cross-validation, class weight balancing, and threshold optimization
-- Applied SHAP TreeExplainer for global and local explanations, validating with permutation importance and PDP plots
-- Ran 15+ statistical tests with Bonferroni correction to validate feature significance
-
-**Result:** Achieved ROC-AUC 0.957 with LightGBM (best of 6 models), catching 92.1% of fraud cases. Identified credit utilization, outstanding debt, and delayed payments as the top 3 fraud drivers via SHAP, enabling targeted prevention strategies estimated to reduce fraud losses by 25-35%.
-
-### Common Interview Questions
-
-See [model_card.md](model_card.md) for additional Q&A.
 
 ---
 
