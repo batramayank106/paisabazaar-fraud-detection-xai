@@ -421,17 +421,6 @@ See [model_card.md](model_card.md) for full details.
 
 ---
 
-## Resume Bullet Points
-
-- Built an end-to-end banking fraud detection system processing 100K+ customer-month records using LightGBM, XGBoost, and CatBoost, achieving **ROC-AUC 0.957** with full SHAP-based explainability
-- Engineered **43 domain-driven financial features** (debt-to-income ratio, payment delay risk, credit utilization interactions) across 5 categories, improving model AUC by **8.7%** over raw features alone
-- Achieved **92.1% fraud recall** at 66.8% precision using class-weight-balanced LightGBM with stratified 5-fold cross-validation (AUC 0.9568 +/- 0.0018)
-- Implemented **SHAP explainability framework** with summary, dependence, force, and waterfall plots providing feature-level explanations for every prediction, suitable for regulatory compliance
-- Performed **15+ statistical tests** (t-test, ANOVA, Chi-Square, Mann-Whitney U, Kruskal-Wallis) with Bonferroni correction and effect sizes (Cohen's d, Cramer's V) to validate feature significance
-- Developed **modular ML pipeline** with 6-model comparison, threshold optimization, calibration analysis, and lift/gain curves in a production-ready Python package with logging and configuration management
-- Analyzed **class imbalance strategies** comparing class weights, SMOTE, and SMOTEENN, demonstrating that class weights achieve comparable recall without synthetic data artifacts
-
----
 
 ## Future Improvements
 
